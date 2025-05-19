@@ -6,6 +6,10 @@ app.listen(8080, () => {
   console.log("server runing on 8080");
 });
 
+app.get("/", (request, response) => {
+  response.json({ message: "hi all" });
+});
+
 var temp = null;
 app.post("/setData", (request, response) => {
   temp = request.body;
